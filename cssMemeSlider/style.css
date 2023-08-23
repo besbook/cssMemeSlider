@@ -104,6 +104,7 @@ legend {
 .slider {
 max-width: 100%;
 height: auto;
+background-color: #1c1a1a;
 }
 
 .wrapper {
@@ -111,28 +112,59 @@ height: auto;
 	border: 7px solid #000;
 	border-radius: 10px;
 	position: absolute;
+	max-width: 80%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
 .navigation {
+	position: absolute;
+	bottom: -15%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
 }
 
 .pag {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.pag::after {
+	width: 10px;
+	height: 10px;
+	border: 3px solid blue;
+	border-radius: 50%;
+	background-color: blue;
+	opacity: 0.9;
+	transition: all 0.4s ease;
+}
+
+.pag:hover::after {
+background-color: #fff;
 }
 
 input[name='m'] {
-
+position: absolute;
+visibility: hidden;
 }
 
 .slides {
+	width: 400%;
+	height: 100%;
+	display: flex;
 }
 
 .slide {
+	width: 25%;
+	transition: all 0.6s ease;
 }
 
 .mem {
+	width: 100%;
+	height: 100%;
 }
 
 #mem1:checked ~ .active {
