@@ -96,3 +96,57 @@ label {
 legend {
   display: block;
 }
+
+
+
+/* ================================================================= */
+
+.slider {
+max-width: 100%;
+height: auto;
+}
+
+.wrapper {
+	overflow: hidden;
+	border: 7px solid #000;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.navigation {
+}
+
+.pag {
+}
+
+input[name='m'] {
+
+}
+
+.slides {
+}
+
+.slide {
+}
+
+.mem {
+}
+
+#mem1:checked ~ .active {
+	margin-left: 0;
+}
+
+#mem2:checked ~ .active {
+	margin-left: -25%;
+}
+
+#mem3:checked ~ .active {
+	margin-left: -50%;
+}
+
+#mem4:checked ~ .active {
+	margin-left: -75%;
+}
