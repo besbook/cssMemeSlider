@@ -101,6 +101,12 @@ legend {
 
 /* ================================================================= */
 
+@media (min-width: 200px) {
+
+body {
+	background-color: #1c1a1a;
+}
+
 .slider {
 max-width: 100%;
 height: auto;
@@ -108,19 +114,20 @@ background-color: #1c1a1a;
 }
 
 .wrapper {
-	overflow: hidden;
-	border: 7px solid #000;
-	border-radius: 10px;
+	border: 1px solid #1c1a1a;
+	border-radius: 26px;
 	position: absolute;
 	max-width: 80%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	overflow: hidden;
+	background-color: #1c1a1a;
 }
 
 .navigation {
 	position: absolute;
-	bottom: -15%;
+	bottom: 30%;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
@@ -128,23 +135,41 @@ background-color: #1c1a1a;
 
 .pag {
 	width: 30px;
-	height: 30px;
+	height: 20px;
 	cursor: pointer;
 }
 
-.pag::after {
-	width: 10px;
-	height: 10px;
-	border: 3px solid blue;
+/* Вариант 2
+.pag {
+	border: 3px solid #51aef0;
 	border-radius: 50%;
-	background-color: blue;
+	background-color: #51aef0;
 	opacity: 0.9;
 	transition: all 0.4s ease;
+	margin: 10px;
+	z-index: 2;
 }
 
-.pag:hover::after {
+.pag:hover {
 background-color: #fff;
+}*/
+
+
+/* ВАРИАНТ 1*/
+
+.pag::after {
+	content: '';
+	display: block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #51aef0;
+	border-radius: 50%;
+	background-color: #51aef0;
+	opacity: 0.9;
+	transition: all 0.4s ease;
+	margin: auto;
 }
+
 
 input[name='m'] {
 position: absolute;
@@ -181,4 +206,19 @@ visibility: hidden;
 
 #mem4:checked ~ .active {
 	margin-left: -75%;
+}
+
+/*.mem1:checked:has {} */
+
+}
+
+@media (min-width: 890px) {
+
+	@media (hover: hover) {
+		.pag:hover::after {
+		content: '';
+		background-color: #fff;
+		border-color: #fff;
+		}
+		}
 }
